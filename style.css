@@ -68,14 +68,14 @@ body{
   margin:0;
 }
 .left-bar{
-  max-width: 230px;
+  max-width: 250px;
   max-height: 100%;
   margin: 0;
   position: fixed;
 }
 .main-monuments{
   margin: auto;
-  left: 400px;
+  left: 370px;
   position: absolute;
 }
 .main-container{
@@ -83,7 +83,4 @@ body{
   left: 500px;
   position: absolute;
 
-}
-.add-btn{
-  
 }
