@@ -8,8 +8,8 @@ body{
   display: flex;
   flex-wrap: wrap;
   margin: auto;
-  width: 500px;
-  height: 400px;
+  width: 700px;
+  height: 500px;
   position: relative;
   overflow: hidden;
   /* padding: 1rem; */
@@ -17,11 +17,17 @@ body{
   margin-bottom: 2rem;
 }
 .place-img{
-  width: 500px;
-  height: 400px;
+  width: 700px;
+  height: 500px;
+  transition: transform 0.4s ease-in-out;
 }
+
+.place-img:hover {
+  transform: scale(1.1);
+}
+
 .overview{
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.7);
   color: white;
   padding: 1rem;
   position:absolute;
@@ -42,6 +48,7 @@ body{
   list-style-type: none;
   padding: 0.5rem 0rem;
 }
+
 .city-btn{
   text-decoration: none;
   text-align: left;
@@ -68,7 +75,7 @@ body{
 }
 .main-monuments{
   margin: auto;
-  left: 500px;
+  left: 400px;
   position: absolute;
 }
 .main-container{

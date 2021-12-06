@@ -32,10 +32,10 @@ $num=mysqli_num_rows($query);
             <a class="nav-link" aria-current="page" href="Home-Login.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="Discover_Login.html">Discover</a>
+            <a class="nav-link" aria-current="page" href="Discover_Login.html">Discover</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="Itinerary.php">My Itinerary</a>
+            <a class="nav-link active" href="Itinerary.php">My Itinerary</a>
           </li>
           <!-- <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -55,18 +55,20 @@ $num=mysqli_num_rows($query);
       </div>
     </div>
   </nav>
-  <div class="header"><h2>YOUR TRIP SCHEDULE</h2></div>
-    <div class="input-table">
-      
-        <table>
-            <tr>
-                <td>Day</td>
-                <td>Your Plan</td>
-            </tr>
-            <?php
+  <div class="header text-center fs-1 text-primary pb-5">YOUR TRIP SCHEDULE</div>
+
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Day</th>
+        <th scope="col">Your Plan</th>
+      </tr>
+    </thead>
+    <tbody>
+      <?php
             for($i=0;$i<$num;$i++){
                 $row=mysqli_fetch_array($query);
-            ?>
+            ?> 
             <tr>
                 <td><?php echo($row["day"]) ?></td>
                 <td><?php echo($row["Content"]) ?></td>
@@ -74,8 +76,7 @@ $num=mysqli_num_rows($query);
             <?php
             }
             ?>
-        </table>
-    </div>
-    
+    </tbody>
+  </table>
 </body>
 </html>

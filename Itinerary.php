@@ -18,7 +18,7 @@ if(isset($_REQUEST["submit2"])){
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,12 +26,12 @@ if(isset($_REQUEST["submit2"])){
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     <link href="IS.css" rel="stylesheet"/>
-</head>
-<body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 fs-5 sticky-top">
-    <div class="container-fluid">
-      <a class="navbar-brand fs-3" href="#">Tritinerary</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3 fs-5 sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand fs-3" href="#">Tritinerary</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -63,38 +63,45 @@ if(isset($_REQUEST["submit2"])){
       </div>
     </div>
   </nav>
-    <div class="input-table">
-    <h2>ADD TO YOUR ITINERARY</h2>
+    <div class="input-table p-4">
+    <h2 class="text-primary pb-3">ADD TO YOUR ITINERARY</h2>
         <form method="post">
-            <table>
-                <tr>
-                    <td>Trip-Day</td>
-                    <td><input type="text" name="day" size="30"></td>
-                </tr>
-                <tr>
-                    <td>Places you wish to Visit</td>
-                    <td><textarea name="content" cols="33"></textarea></td>
-                </tr>
-                <tr>
-                    <td><input type="submit" name="submit" value="Save"></td>
-                </tr>
-            </table>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="day" placeholder="xd">
+            <label for="day">Trip-Day</label>
+          </div>
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" name="content" placeholder="xd">
+            </input>
+            <label for="content">Places</label>
+          </div>
+          <input class="btn btn-primary" type="submit" name="submit" value="Save">
         </form>
     </div>
-    <div class="input-table2">
-        <h2>DELETE FROM ITINERARY</h2>
+
+    <div style="height: 5vh;"></div>
+    <div class="input-table input-table2 p-4">
+        <h2 class="text-primary pb-3">DELETE FROM ITINERARY</h2>
         <form method="post">
-            <table>
-                <tr>
-                    <td>Enter the day you want to delete from your Itinerary</td>
-                    <td><input type="text" name="daydel"></td>
-                </tr>
-                <tr>
-                    <td><input type="submit" name="submit2" value="Delete"></td>
-                </tr>
-            </table>
+          <div class="mb-3">
+            <label for="content" class="form-label">Enter the day you want to delete from your Itinerary</label>
+            <input type="text" class="form-control" name="daydel">
+          </div>
+          <input class="btn btn-primary" type="submit" name="submit2" value="Delete">
         </form>
+      </div>
+      <div class="p-2"></div>
+    <div class="view"><a class="btn btn-primary link-light" href="View_Post.php">View Itinerary</a></div>
+    <div class="container">
+      <footer class="py-3 my-4">
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-light">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-light">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link px-2 text-light">About</a></li>
+        </ul>
+        <p class="text-center text-light">Tritinerary</p>
+      </footer>
     </div>
-    <div class="view"><a href="View_Post.php">View Itinerary</a></div>
 </body>
 </html>
